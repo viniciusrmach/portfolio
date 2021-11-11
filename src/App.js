@@ -1,24 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import styles from './App.scss';
+
+import Card from './components/card/Card';
+
+import ImageRioShowGastronomia from './components/card/img-exemplo.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={styles.container}>
+      <Card
+        image={ImageRioShowGastronomia}
+        title="Rio Show Gastronomia"
+        description="Os melhores restaurantes eleitos pela crítica reunidos em um guia"
+        client="RioShow • 2019"
+      />
+    </main>
   );
 }
 
