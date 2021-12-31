@@ -18,13 +18,19 @@ function Navbar() {
       <nav className={styles.menu}>
         <ul>
           <li className={styles.item}>
-            projetos <p>/ work</p>
+            <a>
+              projetos <p>/ work</p>
+            </a>
           </li>
           <li className={styles.item2}>
-            o que eu faço <p>/ what I do</p>
+            <a>
+              o que eu faço <p>/ what I do</p>
+            </a>
           </li>
           <li className={styles.item3}>
-            sobre mim <p>/ about</p>
+            <a>
+              sobre mim <p>/ about</p>
+            </a>
           </li>
         </ul>
       </nav>
