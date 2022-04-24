@@ -1,5 +1,5 @@
 import styles from './CardsContainer.module.scss';
-import projects from './data/projects';
+import projects from '../../data/projects-cards';
 
 import Card from './Card/Card';
 
