@@ -1,5 +1,5 @@
 import styles from './CardsContainer.module.scss';
-import works from './data/works';
+import projects from './data/projects';
 
 import Card from './Card/Card';
 
@@ -7,13 +7,13 @@ function CardsContainer() {
   return (
     <div className={styles['outer-container']}>
       <div className={styles['inner-container']}>
-        {works.map((work) => (
+        {projects.map((project) => (
           <Card
-            key={work.title}
-            image={work.image}
-            title={work.title}
-            description={work.description}
-            client={work.client}
+            key={project.title}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            client={project.client}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import ImageRioShowGastronomia from '../images/img-exemple.png';
 
-const works = [
+const projects = [
   {
     image: ImageRioShowGastronomia,
     title: 'RioShow Gastronomia',
@@ -38,4 +38,4 @@ const works = [
   },
 ];
 
-export default works;
+export default projects;
