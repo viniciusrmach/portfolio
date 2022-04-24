@@ -81,34 +81,39 @@
     margin: 0 20px 0 20px;
   }
 
-  ul li a {
-    position: relative;
+  a {
+    color: #000000;
     cursor: pointer;
+    text-decoration: none;
   }
 
-  ul li a:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -19px;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.2s ease-out;
-  }
+  ul > li > a {
+    position: relative;
 
-  ul li a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    bottom: -19px;
-  }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -19px;
+      left: 0;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.2s ease-out;
+    }
 
-  ul li a:active {
-    width: 30px;
-    height: 3px;
-    margin-bottom: 5px;
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+      bottom: -19px;
+    }
+
+    &:active {
+      width: 30px;
+      height: 3px;
+      margin-bottom: 5px;
+    }
   }
 
   .menu-line {
@@ -121,5 +126,5 @@
 }
 
 @media screen and (max-width: $mobiBreakpoint) {
- /* Mobile navbar here */
+  /* Mobile navbar here */
 }

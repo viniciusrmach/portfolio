@@ -1,4 +1,5 @@
 import styles from './Navbar.module.scss';
+import { Link } from 'react-router-dom';
 
 import imageEmail from './images/email.svg';
 import imageLinkedin from './images/linkedin.svg';
@@ -8,7 +9,9 @@ import imageInstagram from './images/instagram.svg';
 function Navbar() {
   return (
     <header className={styles.header}>
-      <h1 className={styles.logo}>vinicius machado</h1>
+      <h1 className={styles.logo}>
+        <Link to="/">vinicius machado</Link>
+      </h1>
       <div className={styles['menu-icon']}>
         <div className={styles['menu-line']}></div>
         <div className={styles['menu-line']}></div>
@@ -18,19 +21,19 @@ function Navbar() {
       <nav className={styles.menu}>
         <ul>
           <li className={styles.item}>
-            <a>
+            <Link to="/">
               projetos <p>/ work</p>
-            </a>
+            </Link>
           </li>
           <li className={styles.item2}>
-            <a>
+            <Link to="what-i-do">
               o que eu faço <p>/ what I do</p>
-            </a>
+            </Link>
           </li>
           <li className={styles.item3}>
-            <a>
+            <Link to="about-me">
               sobre mim <p>/ about me</p>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
