@@ -1,15 +1,22 @@
 import './App.scss';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
-import CardsContainer from './components/CardsContainer/CardsContainer';
-
+import Projects from './pages/Projects/Projects';
 
 function App() {
   return (
-    <main>
+    <>
       <Navbar />
-      <CardsContainer />
-    </main>
+
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Projects />} />
+          </Routes>
+        </BrowserRouter>
+      </main>
+    </>
   );
 }
 
