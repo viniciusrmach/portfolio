@@ -9,6 +9,7 @@ function CardsContainer() {
       <div className={styles['inner-container']}>
         {works.map((work) => (
           <Card
+            key={work.title}
             image={work.image}
             title={work.title}
             description={work.description}
