@@ -13,6 +13,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Projects />} />
+
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>
       </main>
