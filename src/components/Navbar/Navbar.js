@@ -29,7 +29,7 @@ function Navbar() {
           </li>
           <li className={styles.item3}>
             <a>
-              sobre mim <p>/ about</p>
+              sobre mim <p>/ about me</p>
             </a>
           </li>
         </ul>
