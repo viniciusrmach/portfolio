@@ -67,22 +67,45 @@ function Navbar() {
         </nav>
 
         <div className={styles.social}>
-          <img className={styles['ico-email']} src={imageEmail} />
-          <img
-            className={styles['ico-linkedin']}
-            src={imageLinkedin}
-            alt={'LinkedIn'}
-          />
-          <img
-            className={styles['ico-twitter']}
-            src={imageTwitter}
-            alt={'Twitter'}
-          />
-          <img
-            className={styles['ico-instagram']}
-            src={imageInstagram}
-            alt={'Instagram'}
-          />
+          <a href="mailto:someone@example.com">
+            <img className={styles['ico-email']} src={imageEmail} />
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles['ico-linkedin']}
+              src={imageLinkedin}
+              alt={'LinkedIn'}
+            />
+          </a>
+
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles['ico-twitter']}
+              src={imageTwitter}
+              alt={'Twitter'}
+            />
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles['ico-instagram']}
+              src={imageInstagram}
+              alt={'Instagram'}
+            />
+          </a>
         </div>
       </div>
 
