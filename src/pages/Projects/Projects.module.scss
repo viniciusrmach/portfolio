@@ -1,0 +1,22 @@
+@import '../../styles/imports';
+
+.page-name {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0 $mobiHorizontalPadding;
+  max-width: $mainContainerWidth;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+
+  @media screen and (min-width: ($mobiBreakpoint + 1)) {
+    display: none;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #9c9c9c;
+  }
+}

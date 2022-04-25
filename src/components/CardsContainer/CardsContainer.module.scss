@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: $mobiBreakpoint) {
+    margin-top: 20px;
+  }
+
   .inner-container {
     max-width: $mainContainerWidth;
     display: grid;
