@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Projects from './pages/Projects/Projects';
 import AboutMe from './pages/AboutMe/AboutMe';
 import WhatIDo from './pages/WhatIDo/WhatIDo';
-import Project from './pages/Project/Project';
+import ExampleTemplate from './pages/Project/ExampleTemplate/ExampleTemplate';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -16,13 +16,16 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Projects />} />
+            <Route index path="/" element={<Projects />} />
 
-            <Route path="/about-me" element={<AboutMe />} />
+            <Route path="about-me" element={<AboutMe />} />
 
-            <Route path="/what-i-do" element={<WhatIDo />} />
+            <Route path="what-i-do" element={<WhatIDo />} />
 
-            <Route path="/project/:id" element={<Project />} />
+            <Route
+              path="project/example-template"
+              element={<ExampleTemplate />}
+            />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

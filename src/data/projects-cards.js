@@ -2,6 +2,7 @@ import ImageRioShowGastronomia from './images/project-cards/img-exemple.png';
 
 const projectsCards = [
   {
+    path: 'example-template',
     image: ImageRioShowGastronomia,
     title: 'RioShow Gastronomia',
     description:
@@ -9,6 +10,7 @@ const projectsCards = [
     client: 'RioShow • 2019',
   },
   {
+    path: 'example-template',
     image: ImageRioShowGastronomia,
     title: 'RioShow Gastronomia 2',
     description:
@@ -16,6 +18,7 @@ const projectsCards = [
     client: 'RioShow • 2019',
   },
   {
+    path: 'example-template',
     image: ImageRioShowGastronomia,
     title: 'RioShow Gastronomia 3',
     description:
@@ -23,6 +26,7 @@ const projectsCards = [
     client: 'RioShow • 2019',
   },
   {
+    path: 'example-template',
     image: ImageRioShowGastronomia,
     title: 'RioShow Gastronomia 4',
     description:
@@ -30,6 +34,7 @@ const projectsCards = [
     client: 'RioShow • 2019',
   },
   {
+    path: 'example-template',
     image: ImageRioShowGastronomia,
     title: 'RioShow Gastronomia 5',
     description:
