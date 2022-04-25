@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Navbar.module.scss';
 import { NavLink } from 'react-router-dom';
-import Hamburger from 'hamburger-react';
+import { Spin as Hamburger } from 'hamburger-react';
 
 import imageEmail from './images/email.svg';
 import imageLinkedin from './images/linkedin.svg';
