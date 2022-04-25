@@ -1,0 +1,57 @@
+@import '../../styles/imports';
+
+.main-container {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: $mainContainerWidth;
+
+  @media screen and (max-width: $mobiBreakpoint) {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: $mobiBreakpoint) {
+  .mobi-padding {
+    padding: 0 $mobiHorizontalPadding;
+  }
+}
+
+.profile-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media screen and (max-width: $mobiBreakpoint) {
+    flex-direction: column;
+  }
+
+  img.profile-image {
+    width: 540px;
+    height: 540px;
+
+    @media screen and (max-width: $mobiBreakpoint) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (min-width: ($mobiBreakpoint + 1)) {
+      margin-right: 30px;
+    }
+  }
+
+  .profile-text {
+    @media screen and (max-width: $mobiBreakpoint) {
+      margin-top: 30px;
+    }
+  }
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.info-block {
+}
