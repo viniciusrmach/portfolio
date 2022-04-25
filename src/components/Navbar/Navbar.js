@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import styles from './Navbar.module.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Hamburger from 'hamburger-react';
 
 import imageEmail from './images/email.svg';
 import imageLinkedin from './images/linkedin.svg';
@@ -7,10 +9,12 @@ import imageTwitter from './images/twitter.svg';
 import imageInstagram from './images/instagram.svg';
 
 function Navbar() {
+  const [isMobiMenuOpen, setIsMobiMenuOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <h1 className={styles.logo}>
-        <Link to="/">vinicius machado</Link>
+        <NavLink to="/">vinicius machado</NavLink>
       </h1>
 
       <div className={styles['menu-icon']}>
@@ -19,23 +23,45 @@ function Navbar() {
         <div className={styles['menu-line']}></div>
       </div>
 
-      <div className={styles['menu-desk']}>
-        <nav className={styles.menu}>
+      <div
+        className={[
+          styles.navbar,
+          styles[`${isMobiMenuOpen ? 'navbar-mobi-menu' : ''}`],
+        ].join(' ')}
+      >
+        <nav>
           <ul>
-            <li>
-              <Link to="/">
+            <li onClick={() => setIsMobiMenuOpen(false)}>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? styles['link-active'] : ''
+                }
+              >
                 projetos <span>/ work</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link to="what-i-do">
+
+            <li onClick={() => setIsMobiMenuOpen(false)}>
+              <NavLink
+                to="what-i-do"
+                className={({ isActive }) =>
+                  isActive ? styles['link-active'] : ''
+                }
+              >
                 o que eu faço <span>/ what I do</span>
-              </Link>
+              </NavLink>
             </li>
-            <li>
-              <Link to="about-me">
+
+            <li onClick={() => setIsMobiMenuOpen(false)}>
+              <NavLink
+                to="about-me"
+                className={({ isActive }) =>
+                  isActive ? styles['link-active'] : ''
+                }
+              >
                 sobre mim <span>/ about me</span>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -60,7 +86,9 @@ function Navbar() {
         </div>
       </div>
 
-      <div className={styles['menu-mobi']}>mobi menu</div>
+      <div className={styles['navbar-mobi']}>
+        <Hamburger toggled={isMobiMenuOpen} toggle={setIsMobiMenuOpen} />
+      </div>
     </header>
   );
 }

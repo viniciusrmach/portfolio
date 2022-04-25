@@ -1,13 +1,20 @@
 @import '../../styles/imports';
 
 .header {
+  padding-bottom: 13px;
   display: flex;
   max-width: $mainContainerWidth;
   margin: 0 auto;
   padding-top: 40px;
   border-bottom: 1px solid #e9e9e9;
 
+  @media screen and (max-width: $mobiBreakpoint) {
+    padding: 0 $mobiHorizontalPadding;
+  }
+
   .logo {
+    display: flex;
+    align-items: center;
     font-family: Lora, Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
     font-size: 19px;
@@ -19,28 +26,81 @@
     }
   }
 
-  .menu-desk {
+  .navbar,
+  .navbar-mobi {
     flex: 1;
     display: flex;
+  }
 
+  .navbar {
     @media screen and (max-width: $mobiBreakpoint) {
       display: none;
+    }
 
-      & nav {
-        flex: 1;
-      }
+    & > nav {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
-  .menu-mobi {
+  .navbar-mobi {
+    justify-content: right;
+
     @media screen and (min-width: ($mobiBreakpoint + 1)) {
       display: none;
     }
   }
 
-  .menu {
-    flex: 1;
-    margin: 0 auto;
+  @media screen and (max-width: $mobiBreakpoint) {
+    .navbar-mobi-menu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 6px #00000026;
+
+      & > nav > ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        li {
+          margin: 0;
+          display: flex;
+          font-size: 14px;
+          line-height: 14px;
+          border-bottom: 1px solid #e9e9e9;
+
+          span {
+            font-size: 12px;
+          }
+
+          a {
+            flex: 1;
+            padding: 10px $mobiHorizontalPadding;
+
+            &.link-active {
+              background-color: #f9f9f9;
+            }
+
+            &:after {
+              position: inherit;
+            }
+          }
+        }
+      }
+
+      .social {
+        padding: 30px $mobiHorizontalPadding;
+      }
+    }
   }
 
   ul {
@@ -64,13 +124,21 @@
         color: #9c9c9c;
         font-weight: normal;
       }
+
+      a.link-active {
+        &:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+          bottom: -19px;
+        }
+      }
     }
   }
 
   .social {
-    text-align: right;
-    display: inline-block;
-    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .ico-email {
@@ -107,44 +175,48 @@
     text-decoration: none;
   }
 
-  ul > li > a {
-    position: relative;
+  @media screen and (min-width: ($mobiBreakpoint + 1)) {
+    ul > li > a {
+      position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 2px;
-      bottom: -19px;
-      left: 0;
-      background-color: black;
-      transform-origin: bottom right;
-      transition: transform 0.2s ease-out;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -19px;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom right;
+        transition: transform 0.2s ease-out;
+      }
+
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        bottom: -19px;
+      }
+
+      &:active {
+        width: 30px;
+        height: 3px;
+        margin-bottom: 5px;
+      }
     }
 
-    &:hover:after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-      bottom: -19px;
-    }
-
-    &:active {
+    .menu-line {
       width: 30px;
       height: 3px;
+      background-color: black;
       margin-bottom: 5px;
+      display: none;
     }
   }
 
-  .menu-line {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin-bottom: 5px;
-    display: none;
+  :global(.hamburger-react) {
+    & > div {
+      height: 1px !important;
+    }
   }
-}
-
-@media screen and (max-width: $mobiBreakpoint) {
-  /* Mobile navbar here */
 }
