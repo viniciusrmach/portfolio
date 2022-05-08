@@ -1,0 +1,30 @@
+@import '../../../styles/imports';
+
+.container {
+  margin-top: 20px;
+
+  .title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+  }
+  .text-primary {
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #414142;
+  }
+  .text-secondary {
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #414142;
+
+    a {
+      color: #414142;
+    }
+  }
+}
