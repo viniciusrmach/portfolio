@@ -35,7 +35,7 @@ function AboutMe() {
           </div>
 
           <div className={styles['contact-title']}>Contato</div>
-          <div className={styles['contact-emil']}>viniciusrmach@gmail.com</div>
+          <div className={styles['contact-email']}>viniciusrmach@gmail.com</div>
         </div>
       </div>
 
