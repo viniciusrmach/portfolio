@@ -39,10 +39,45 @@
     }
   }
 
-  .profile-text {
+  .profile-text-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: bold;
+
     @media screen and (max-width: $mobiBreakpoint) {
-      margin-top: 30px;
+      margin-top: 20px;
     }
+  }
+
+  .profile-text-primary {
+    margin-top: 20px;
+    font-family: Lora, Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .profile-text-secondary {
+    margin-top: 20px;
+    margin-top: 25px;
+    font-family: Lora, Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    line-height: 21px;
+  }
+
+  .contact-title {
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
+  }
+
+  .contact-email {
+    margin-top: 20px;
+    font-family: Lora, Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 

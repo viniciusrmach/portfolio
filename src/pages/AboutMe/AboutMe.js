@@ -9,13 +9,13 @@ function AboutMe() {
         <img className={styles['profile-image']} src={profileImage} />
 
         <div
-          className={[styles['profile-text'], styles['mobi-padding']].join(' ')}
+          className={ styles['mobi-padding']}
         >
-          <div className={styles['profile-text']}>
+          <div className={styles['profile-text-title']}>
             eu acredito em projetos com narrativas bem construídas que infor
             projetos que contribuem com informação relevante.
           </div>
-          <div className={styles['profile-text']}>
+          <div className={styles['profile-text-primary']}>
             Em até 6 linhas você precisa contar: onde você vive, onde estudou,
             experiências de trabalho e cursos que fez, área de atuação, projetos
             pessoais que fez, interesses e dizer que é sócio-fundador da
@@ -24,7 +24,7 @@ function AboutMe() {
             projetos pessoais que fez, interesses e dizer que é sócio-fundador
             da Nautilus
           </div>
-          <div className={styles['profile-text']}>
+          <div className={styles['profile-text-secondary']}>
             / Em até 6 linhas você precisa contar: onde você vive, onde estudou,
             experiências de trabalho e cursos que fez, área de atuação, projetos
             pessoais que fez, interesses e dizer que é sócio-fundador da
