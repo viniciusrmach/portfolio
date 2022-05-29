@@ -10,6 +10,7 @@ function CardsContainer() {
         {projects.map((project) => (
           <Card
             key={project.title}
+            path={project.path}
             image={project.image}
             title={project.title}
             description={project.description}
