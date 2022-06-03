@@ -68,7 +68,7 @@ function Navbar() {
 
         <div className={styles.social}>
           <a href="mailto:someone@example.com">
-            <img className={styles['ico-email']} src={imageEmail} />
+            <img className={styles['ico-email']} src={imageEmail} alt="Email" />
           </a>
 
           <a
@@ -79,7 +79,7 @@ function Navbar() {
             <img
               className={styles['ico-linkedin']}
               src={imageLinkedin}
-              alt={'LinkedIn'}
+              alt="LinkedIn"
             />
           </a>
 
@@ -91,7 +91,7 @@ function Navbar() {
             <img
               className={styles['ico-twitter']}
               src={imageTwitter}
-              alt={'Twitter'}
+              alt="Twitter"
             />
           </a>
 
@@ -103,7 +103,7 @@ function Navbar() {
             <img
               className={styles['ico-instagram']}
               src={imageInstagram}
-              alt={'Instagram'}
+              alt="Instagram"
             />
           </a>
         </div>

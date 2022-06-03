@@ -8,7 +8,7 @@ function AboutMe() {
   return (
     <div className={styles['main-container']}>
       <div className={styles['profile-container']}>
-        <img className={styles['profile-image']} src={profileImage} />
+        <img className={styles['profile-image']} src={profileImage} alt="Vinicius Machado" />
 
         <div className={styles['mobi-padding']}>
           <h2 className={styles['profile-text-title']}>

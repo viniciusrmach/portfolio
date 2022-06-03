@@ -30,7 +30,11 @@ function WhatIDo() {
       </div>
 
       <div className={styles['content-image-container']}>
-        <img className={styles['content-image']} src={placeholderImage} />
+        <img
+          className={styles['content-image']}
+          src={placeholderImage}
+          alt="Descrição da imagem"
+        />
       </div>
 
       <div className={styles['main-container']}>
@@ -46,7 +50,11 @@ function WhatIDo() {
       </div>
 
       <div className={styles['content-image-container']}>
-        <img className={styles['content-image']} src={placeholderImage} />
+        <img
+          className={styles['content-image']}
+          src={placeholderImage}
+          alt="Descrição da imagem"
+        />
       </div>
 
       <div className={styles['main-container']}>
@@ -63,11 +71,19 @@ function WhatIDo() {
       </div>
 
       <div className={styles['content-image-container']}>
-        <img className={styles['content-image']} src={placeholderImage} />
+        <img
+          className={styles['content-image']}
+          src={placeholderImage}
+          alt="Descrição da imagem"
+        />
       </div>
 
       <div className={styles['content-image-container']}>
-        <img className={styles['content-image']} src={placeholderImage} />
+        <img
+          className={styles['content-image']}
+          src={placeholderImage}
+          alt="Descrição da imagem"
+        />
       </div>
     </>
   );
