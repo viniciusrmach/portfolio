@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+
+# Redirect to HTTPS WC
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUESTURI} !^/.well-known/acme-challenge/[0-9a-zA-Z-]+$
+RewriteCond %{REQUESTURI} !^/.well-known/cpanel-dcv/[0-9a-zA-Z-]+$
+RewriteCond %{REQUEST_URI} !^/.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/.well-known/pki-validation/[A-F0-9]{32}.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Make React Router work
+RewriteBase /
+RewriteRule ˆindex\.html$ [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
