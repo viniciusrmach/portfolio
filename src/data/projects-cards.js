@@ -2,12 +2,12 @@ import ImageRioShowGastronomia from './images/project-cards/img-exemple.png';
 
 const projectsCards = [
   {
-    path: 'example-template',
+    path: 'trueet',
     image: ImageRioShowGastronomia,
-    title: 'RioShow Gastronomia',
+    title: 'Trueet',
     description:
-      'Os melhores restaurantes eleitos pela crítica reunidos em um guia',
-    client: 'RioShow • 2019',
+      'A notícia falsa está circulando. Avise seus amigos.',
+    client: 'GLOBAL EDITORS NETWORK • 2018',
   },
   {
     path: 'example-template',

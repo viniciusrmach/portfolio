@@ -6,6 +6,7 @@ import Projects from './pages/Projects/Projects';
 import AboutMe from './pages/AboutMe/AboutMe';
 import WhatIDo from './pages/WhatIDo/WhatIDo';
 import ExampleTemplate from './pages/Project/ExampleTemplate/ExampleTemplate';
+import Trueet from './pages/Project/Trueet/Trueet';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -25,6 +26,11 @@ function App() {
             <Route
               path="project/example-template"
               element={<ExampleTemplate />}
+            />
+
+            <Route
+              path="project/trueet"
+              element={<Trueet />}
             />
 
             <Route path="*" element={<Navigate to="/" />} />
